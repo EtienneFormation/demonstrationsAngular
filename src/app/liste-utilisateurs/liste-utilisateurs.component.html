@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let username of usernames">
+    {{username}}
+    <button (click)="deleteUser(username)">Supprimer</button>
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="newUser"/>
+<button (click)="addUser()">Ajouter</button>
+
+
