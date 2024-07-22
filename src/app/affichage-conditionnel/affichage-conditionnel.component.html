@@ -1,0 +1,19 @@
+
+<label for="showMessage">Montrer le message de bienvenue : </label>
+<input id="showMessage" type="checkbox" [(ngModel)]="showWelcomeMessage"/>
+
+<div *ngIf="showWelcomeMessage">
+  <p>Bienvenue sur ma super application !</p>
+</div>
+
+<br>
+<input [(ngModel)]="username"/>
+
+<p>
+  Votre nom d'utilisateur est :
+  <span [ngStyle]="{
+    'color' : username === 'Administrateur' ? 'red': ''
+  }">{{username}}</span>
+</p>
+
+

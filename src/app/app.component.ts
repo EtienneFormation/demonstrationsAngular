@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {UnptinomComponent} from "./unptinom/unptinom.component";
+import {AffichageConditionnelComponent} from "./affichage-conditionnel/affichage-conditionnel.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UnptinomComponent],
+  imports: [RouterOutlet, UnptinomComponent, AffichageConditionnelComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
