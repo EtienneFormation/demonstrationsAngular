@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let username of usernames">
-    {{username}}
+    {{username | titlecase}}
     <button (click)="deleteUser(username)">Supprimer</button>
   </li>
 </ul>
@@ -8,4 +8,5 @@
 <input type="text" [(ngModel)]="newUser"/>
 <button (click)="addUser()">Ajouter</button>
 
-
+<p>{{ Date() | date: 'dd MMMM yyyy' : '' : 'fr'}}</p>
+<p>{{ 5 | number : '1.2-2' }}</p>

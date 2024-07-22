@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {CommonModule, DatePipe, NgForOf, TitleCasePipe} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
 @Component({
@@ -7,7 +7,10 @@ import {FormsModule} from "@angular/forms";
   standalone: true,
   imports: [
     NgForOf,
-    FormsModule
+    FormsModule,
+    TitleCasePipe,
+    DatePipe,
+    CommonModule
   ],
   templateUrl: './liste-utilisateurs.component.html',
   styleUrl: './liste-utilisateurs.component.css'
@@ -29,4 +32,6 @@ export class ListeUtilisateursComponent {
       this.usernames.splice(index, 1);
     }
   }
+
+  protected readonly Date = Date;
 }
