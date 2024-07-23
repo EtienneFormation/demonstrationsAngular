@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {CommonModule, DatePipe, NgForOf, TitleCasePipe} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {UtilisateurService} from "../utilisateur.service";
 
 @Component({
   selector: 'app-liste-utilisateurs',
@@ -16,22 +17,15 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './liste-utilisateurs.component.css'
 })
 export class ListeUtilisateursComponent {
-  usernames : string[] = [];
-  newUser : string = "";
 
-  addUser() {
-    if (this.newUser) {
-      this.usernames.push(this.newUser);
-      this.newUser = "";
-    }
+  constructor(private utilisateurService : UtilisateurService) {
   }
 
-  deleteUser(user : string) {
-    let index = this.usernames.indexOf(user);
-    if (index > -1) {
-      this.usernames.splice(index, 1);
-    }
+  get utilisateurs() {
+    return this.utilisateurService.usernames;
   }
 
-  protected readonly Date = Date;
+  deleteUtilisateur(utilisateur : string) {
+    this.utilisateurService.deleteUser(utilisateur);
+  }
 }

@@ -1,12 +1,8 @@
 <ul>
-  <li *ngFor="let username of usernames">
+  <li *ngFor="let username of utilisateurs">
     {{username | titlecase}}
-    <button (click)="deleteUser(username)">Supprimer</button>
+    <button (click)="deleteUtilisateur(username)">Supprimer</button>
   </li>
 </ul>
 
-<input type="text" [(ngModel)]="newUser"/>
-<button (click)="addUser()">Ajouter</button>
 
-<p>{{ Date() | date: 'dd MMMM yyyy' : '' : 'fr'}}</p>
-<p>{{ 5 | number : '1.2-2' }}</p>
