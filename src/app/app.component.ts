@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {UnptinomComponent} from "./unptinom/unptinom.component";
 import {AffichageConditionnelComponent} from "./affichage-conditionnel/affichage-conditionnel.component";
 import {ListeUtilisateursComponent} from "./liste-utilisateurs/liste-utilisateurs.component";
@@ -8,7 +8,7 @@ import {AjouterUtilisateurComponent} from "./ajouter-utilisateur/ajouter-utilisa
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UnptinomComponent, AffichageConditionnelComponent, ListeUtilisateursComponent, AjouterUtilisateurComponent, RouterLink],
+  imports: [RouterOutlet, UnptinomComponent, AffichageConditionnelComponent, ListeUtilisateursComponent, AjouterUtilisateurComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
