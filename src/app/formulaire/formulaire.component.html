@@ -1,42 +1,47 @@
-
-<form>
+<!-- (ngSubmit)="onFormSubmit()" -->
+<form [formGroup]="myform" (submit)="onFormSubmit()">
   <div>
     <label for="username">Nom d'utilisateur :</label>
-    <input type="text" name="username" id="username" class="input" required />
+    <input type="text" name="username" formControlName="username" id="username" class="input" required />
+    <p *ngIf="myform.get('username')?.errors?.['required']">Le nom d'utilisateur est obligatoire.</p>
   </div>
   <div>
     <label for="age">Age :</label>
-    <input type="number" name="age" id="age" class="input" required />
+    <input type="number" name="age" formControlName="age" id="age" class="input" required />
+    <p *ngIf="myform.get('age')?.errors?.['required']">L'age est obligatoire.</p>
+    <p *ngIf="myform.get('age')?.errors?.['min']">Vous devez avoir plus de 18 ans pour accéder à cette ressource.</p>
   </div>
   <div>
     <label for="ddn">Date de naissance :</label>
-    <input type="date" name="ddn" id="ddn" class="input" required />
+    <input type="date" name="ddn" formControlName="ddn" id="ddn" class="input" required />
   </div>
   <div>
     <label for="email">Email :</label>
-    <input type="email" name="email" id="email" class="input" required />
+    <input type="email" name="email" formControlName="email" id="email" class="input" required />
+    <p *ngIf="myform.get('email')?.errors?.['required']">L'email est obligatoire.</p>
+    <p *ngIf="myform.get('email')?.errors?.['email']">L'email doit avoir un format valide.</p>
   </div>
   <div>
     <label for="password">Mot de passe :</label>
-    <input type="password" name="password" id="password" class="input" required />
+    <input type="password" name="password" formControlName="password" id="password" class="input" required />
   </div>
 
   <fieldset>
     <legend>Checkboxes pizza</legend>
-    <input type="checkbox" name="opt1" />Tomates<br>
-    <input type="checkbox" name="opt2" />Ananas<br>
-    <input type="checkbox" name="opt3" />Nutella<br>
+    <input type="checkbox" name="topping1" formControlName="topping1" />Tomates<br>
+    <input type="checkbox" name="topping2" formControlName="topping2" />Ananas<br>
+    <input type="checkbox" name="topping3" formControlName="topping3" />Nutella<br>
   </fieldset>
 
   <fieldset>
     <legend>Radiobutton base pizza</legend>
-    <input type="radio" name="base" value="creme" />Crème<br>
-    <input type="radio" name="base" value="sauce tomate" />Sauce tomate<br>
+    <input type="radio" name="base" formControlName="base" value="creme" />Crème<br>
+    <input type="radio" name="base" formControlName="base" value="sauce tomate" />Sauce tomate<br>
   </fieldset>
 
   <div>
     <label for="sport">Sport :</label>
-    <select name="sport" id="sport" class="input">
+    <select name="sport" formControlName="sport" id="sport" class="input">
       <option value="judo">Judo</option>
       <option value="voilier">Voilier</option>
       <option value="badminton">Badminton</option>
@@ -46,12 +51,15 @@
   </div>
 
   <div>
-    <label for="note">Note :</label>
-    <input type="range" name="note" id="note" min="0" max="20" step=".5" />
+    <label for="grade">Note :</label>
+    <input type="range" name="grade" formControlName="grade" id="grade" min="0" max="20" step=".5" />
   </div>
 
   <div>
-    <label for="commentaires">Commentaires :</label>
-    <textarea name="commentaires" id=commentaires cols="64" rows="4"></textarea>
+    <label for="commentary">Commentaires :</label>
+    <textarea name="commentary" formControlName="commentary" id=commentary cols="64" rows="4"></textarea>
   </div>
+
+  <input type="submit" value="Valider" />
+  <input type="reset" value="Réinitialiser le formulaire"/>
 </form>
