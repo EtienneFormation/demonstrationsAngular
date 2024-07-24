@@ -5,6 +5,7 @@ import {AjouterUtilisateurComponent} from "./ajouter-utilisateur/ajouter-utilisa
 import {ListeUtilisateursComponent} from "./liste-utilisateurs/liste-utilisateurs.component";
 import {ConsulterUtilisateurComponent} from "./consulter-utilisateur/consulter-utilisateur.component";
 import {emptyUtilisateursGuard} from "./empty-utilisateurs.guard";
+import {FormulaireComponent} from "./formulaire/formulaire.component";
 
 export const routes: Routes = [
   { path : 'demo1', component : UnptinomComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     path : 'demo5/:id',
     component : ConsulterUtilisateurComponent,
     canActivate: [emptyUtilisateursGuard]
-  }
+  },
+  { path : 'demo6', component : FormulaireComponent }
 ];

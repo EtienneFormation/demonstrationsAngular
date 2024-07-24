@@ -1,3 +1,7 @@
 .active {
-  background-color: orange;
+  background-color: white;
+  color : black;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }

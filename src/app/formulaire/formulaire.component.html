@@ -1,0 +1,57 @@
+
+<form>
+  <div>
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" name="username" id="username" class="input" required />
+  </div>
+  <div>
+    <label for="age">Age :</label>
+    <input type="number" name="age" id="age" class="input" required />
+  </div>
+  <div>
+    <label for="ddn">Date de naissance :</label>
+    <input type="date" name="ddn" id="ddn" class="input" required />
+  </div>
+  <div>
+    <label for="email">Email :</label>
+    <input type="email" name="email" id="email" class="input" required />
+  </div>
+  <div>
+    <label for="password">Mot de passe :</label>
+    <input type="password" name="password" id="password" class="input" required />
+  </div>
+
+  <fieldset>
+    <legend>Checkboxes pizza</legend>
+    <input type="checkbox" name="opt1" />Tomates<br>
+    <input type="checkbox" name="opt2" />Ananas<br>
+    <input type="checkbox" name="opt3" />Nutella<br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Radiobutton base pizza</legend>
+    <input type="radio" name="base" value="creme" />Crème<br>
+    <input type="radio" name="base" value="sauce tomate" />Sauce tomate<br>
+  </fieldset>
+
+  <div>
+    <label for="sport">Sport :</label>
+    <select name="sport" id="sport" class="input">
+      <option value="judo">Judo</option>
+      <option value="voilier">Voilier</option>
+      <option value="badminton">Badminton</option>
+      <option value="natation">Natation</option>
+      <option value="aviron">Aviron</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="note">Note :</label>
+    <input type="range" name="note" id="note" min="0" max="20" step=".5" />
+  </div>
+
+  <div>
+    <label for="commentaires">Commentaires :</label>
+    <textarea name="commentaires" id=commentaires cols="64" rows="4"></textarea>
+  </div>
+</form>
