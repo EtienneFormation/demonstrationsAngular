@@ -1,3 +1,26 @@
+<!--
+<nav>
+  <button (click)="goto('/demo1')">Demo 1</button>
+  <button (click)="goto('/demo2')">Demo 2</button>
+  <button (click)="goto('/demo3')">Demo 3</button>
+  <button (click)="goto('/demo4')">Demo 4</button>
+</nav>
+-->
+<!--
+<nav>
+  <button [routerLink]="'/demo1'">Demo 1</button>
+  <button [routerLink]="'/demo2'">Demo 2</button>
+  <button [routerLink]="'/demo3'">Demo 3</button>
+  <button [routerLink]="'/demo4'">Demo 4</button>
+</nav>
+-->
+<nav>
+  <a routerLink="/demo1">Demo 1</a>
+  <a routerLink="/demo2">Demo 2</a>
+  <a routerLink="/demo3">Demo 3</a>
+  <a routerLink="/demo4">Demo 4</a>
+</nav>
 
-<app-liste-utilisateurs/>
-<app-ajouter-utilisateur/>
+<router-outlet></router-outlet>
+
+<p>Coucou je suis un super footer !</p>
