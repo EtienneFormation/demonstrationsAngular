@@ -8,6 +8,7 @@ import {emptyUtilisateursGuard} from "./empty-utilisateurs.guard";
 import {FormulaireComponent} from "./formulaire/formulaire.component";
 import {TicTacCallbackComponent} from "./tic-tac-callback/tic-tac-callback.component";
 import {TicTacPromiseComponent} from "./tic-tac-promise/tic-tac-promise.component";
+import {TicTacAsyncAwaitComponent} from "./tic-tac-async-await/tic-tac-async-await.component";
 
 export const routes: Routes = [
   { path : 'demo1', component : UnptinomComponent },
@@ -22,4 +23,5 @@ export const routes: Routes = [
   { path : 'demo6', component : FormulaireComponent },
   { path : 'tictaccallback', component : TicTacCallbackComponent },
   { path : 'tictacpromise', component : TicTacPromiseComponent },
+  { path : 'tictacawait', component : TicTacAsyncAwaitComponent }
 ];
