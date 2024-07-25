@@ -6,6 +6,7 @@ import {ListeUtilisateursComponent} from "./liste-utilisateurs/liste-utilisateur
 import {ConsulterUtilisateurComponent} from "./consulter-utilisateur/consulter-utilisateur.component";
 import {emptyUtilisateursGuard} from "./empty-utilisateurs.guard";
 import {FormulaireComponent} from "./formulaire/formulaire.component";
+import {TicTacCallbackComponent} from "./tic-tac-callback/tic-tac-callback.component";
 
 export const routes: Routes = [
   { path : 'demo1', component : UnptinomComponent },
@@ -17,5 +18,6 @@ export const routes: Routes = [
     component : ConsulterUtilisateurComponent,
     canActivate: [emptyUtilisateursGuard]
   },
-  { path : 'demo6', component : FormulaireComponent }
+  { path : 'demo6', component : FormulaireComponent },
+  { path : 'tictaccallback', component : TicTacCallbackComponent },
 ];
